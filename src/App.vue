@@ -1,19 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-link to="/">component A</router-link>
+    |
+    <router-link to="/b">component B</router-link>
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ax from "./components/a.vue";
+import bx from "./components/b.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    ax,
+    bx,
+  },
+};
 </script>
 
 <style>
